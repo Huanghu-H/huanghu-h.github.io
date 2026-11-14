@@ -3,57 +3,95 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>huanghusxt.top · 测试首页</title>
-    <style>
-      :root {
-        color-scheme: light dark;
-        font-family: "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
-        line-height: 1.6;
-        color: #182d2a;
-        background: #f2f8f4;
-      }
-
-      body {
-        display: grid;
-        min-height: 100vh;
-        margin: 0;
-        place-items: center;
-      }
-
-      main {
-        box-sizing: border-box;
-        width: min(34rem, calc(100% - 2rem));
-        padding: clamp(1.5rem, 5vw, 3rem);
-        border: 1px solid #b4d0c5;
-        border-radius: 1rem;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(1.75rem, 6vw, 2.75rem);
-        line-height: 1.2;
-      }
-
-      p {
-        margin: 1rem 0 0;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          color: #ecf6f1;
-          background: #142622;
-        }
-
-        main {
-          border-color: #527568;
-        }
-      }
-    </style>
+    <meta name="theme-color" content="#11152c">
+    <meta name="description" content="Huanghu 的主页。一间漂浮在云上的放映室。">
+    <title>Huanghu 的主页 · 云上放映室</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="gallery.js" defer></script>
   </head>
-  <body>
-    <main>
-      <h1>huanghusxt.top</h1>
-      <p>这是 GitHub Pages 的测试首页。你能看到这段文字，说明页面已成功发布。</p>
+  <body id="top">
+    <a class="skip-link" href="#main">跳到内容</a>
+    <header class="site-header shell">
+      <a class="brand" href="#top" aria-label="Huanghu 的主页">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>huanghu<span class="brand-period">.</span></span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#main">首页</a>
+        <a href="#scenes">放映室 <span aria-hidden="true">↘</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero shell" aria-labelledby="homepage-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span aria-hidden="true">✧</span> 云上放映室</p>
+          <h1 id="homepage-title" aria-label="Huanghu 的主页"><span class="hero-name">Huanghu<span>.</span></span><span class="hero-subtitle">的主页</span></h1>
+          <p class="hero-note">在云上留一盏灯。<br>有空的话，进来看看。</p>
+          <a class="hero-link" href="#scenes">进入放映室 <span aria-hidden="true">↘</span></a>
+        </div>
+        <figure class="hero-art">
+          <img
+            src="assets/cloud-cinema.webp"
+            srcset="assets/cloud-cinema-small.webp 768w, assets/cloud-cinema.webp 1536w"
+            sizes="(max-width: 720px) 94vw, (min-width: 1370px) 810px, 61vw"
+            width="1536"
+            height="1024"
+            fetchpriority="high"
+            alt="花草和云朵托着一座红屋顶的浮岛放映室，一只黑白猫坐在天文台的石阶上。">
+          <figcaption>云岛放映室</figcaption>
+        </figure>
+        <span class="hero-spark" aria-hidden="true">✦</span>
+      </section>
+
+      <section class="scenes shell" id="scenes" aria-labelledby="scenes-title">
+        <header class="scenes-header">
+          <h2 id="scenes-title">放映室</h2>
+          <p>三幅场景插画 · 点开看大图</p>
+        </header>
+        <div class="scene-grid">
+          <figure class="scene scene-tram">
+            <a class="scene-link" href="assets/meadow-tram.webp" aria-label="查看《穿过云野》大图">
+              <img src="assets/meadow-tram.webp" width="512" height="1024" loading="lazy" decoding="async" alt="蓝色电车穿过开满野花的草原，云层间露出远处的圆顶。">
+              <span class="scene-arrow" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>穿过云野</figcaption>
+          </figure>
+          <figure class="scene scene-cat">
+            <a class="scene-link" href="assets/window-cat.webp" aria-label="查看《窗边的小猫》大图">
+              <img src="assets/window-cat.webp" width="512" height="1024" loading="lazy" decoding="async" alt="黑白小猫趴在开着浅粉色花朵的窗边，拱窗外是夕阳和暮云。">
+              <span class="scene-arrow" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>窗边的小猫</figcaption>
+          </figure>
+          <figure class="scene scene-moon">
+            <a class="scene-link" href="assets/moon-observatory.webp" aria-label="查看《月下观测站》大图">
+              <img src="assets/moon-observatory.webp" width="512" height="1024" loading="lazy" decoding="async" alt="一轮弯月悬在深蓝色星空里，海崖上的玻璃观测站透出暖光。">
+              <span class="scene-arrow" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>月下观测站</figcaption>
+          </figure>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer shell">
+      <span><span class="footer-spark" aria-hidden="true">✧</span> Huanghu 的主页</span>
+      <a href="#top">回到顶部 <span aria-hidden="true">↑</span></a>
+    </footer>
+
+    <dialog class="gallery" aria-labelledby="gallery-title">
+      <div class="gallery-content">
+        <form method="dialog">
+          <button class="gallery-close" aria-label="关闭大图" autofocus>×</button>
+        </form>
+        <img class="gallery-image" alt="">
+        <div class="gallery-controls">
+          <button class="gallery-previous" type="button" aria-label="上一幅">←</button>
+          <p id="gallery-title"></p>
+          <button class="gallery-next" type="button" aria-label="下一幅">→</button>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>

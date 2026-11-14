@@ -82,12 +82,22 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 .site-header nav {
   display: flex;
-  gap: clamp(.35rem, 3vw, 2.4rem);
+  gap: clamp(.18rem, 1.8vw, 1.45rem);
   color: var(--mist);
 }
 
-.site-header nav a { padding: .65rem .3rem; font-size: clamp(.78rem, 2.3vw, .95rem); }
+.site-header nav a {
+  padding: .58rem clamp(.6rem, 1.4vw, 1.3rem);
+  white-space: nowrap;
+  border-radius: 99rem;
+  font-size: clamp(.76rem, 2.3vw, .95rem);
+}
 .site-header nav a:hover { color: var(--peach); }
+.site-header nav a[aria-current="page"] {
+  color: var(--paper);
+  background: #a8bcff26;
+  box-shadow: inset 0 0 0 1px #d4dcff33;
+}
 
 .hero {
   position: relative;
@@ -188,6 +198,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
   padding-block: clamp(3.75rem, 8vw, 8rem);
 }
 
+body:has(.hero) {
+  background:
+    radial-gradient(ellipse at 68% 19%, #272950 0%, transparent 30rem),
+    var(--ink);
+}
+
 h2 {
   font-size: clamp(2.55rem, 6.6vw, 6.85rem);
   letter-spacing: -.04em;
@@ -219,16 +235,25 @@ h2 {
   border-top: 1px solid var(--line);
 }
 
-.sky { background: radial-gradient(ellipse at 40% 32%, #17305e 0%, #101830 65%, #0d1529 100%); }
+.sky {
+  background:
+    radial-gradient(circle, #d1ddff45 1px, transparent 1.5px) 0 0 / 89px 79px,
+    radial-gradient(circle, #c5d4ff2a 1px, transparent 1.5px) 32px 25px / 129px 113px,
+    radial-gradient(ellipse at 40% 32%, #17305e 0%, #101830 65%, #0d1529 100%);
+}
 
 .city {
   --mist: #dbbdd0;
-  background: radial-gradient(ellipse at 75% 35%, #3e233a 0%, #251829 66%, #171523 100%);
+  background:
+    radial-gradient(ellipse at 6% 91%, #3c2853b3, transparent 41%),
+    radial-gradient(ellipse at 75% 35%, #48273e 0%, #251829 66%, #171523 100%);
 }
 
 .seasons {
   --mist: #c5d6c8;
-  background: radial-gradient(ellipse at 28% 35%, #254043 0%, #14262a 66%, #0d171f 100%);
+  background:
+    radial-gradient(ellipse at 91% 85%, #31564978, transparent 45%),
+    radial-gradient(ellipse at 28% 35%, #254043 0%, #14262a 66%, #0d171f 100%);
 }
 
 .feature {
@@ -388,6 +413,10 @@ html:has(.gallery[open]) { overflow: hidden; }
 }
 
 @media (max-width: 740px) {
+  .header-inner { gap: .35rem; }
+  .brand { gap: .4rem; }
+  .brand-mark { width: 1.8rem; height: 1.8rem; }
+  .site-header nav a { padding-inline: .42rem; }
   .hero { min-height: min(45rem, calc(100svh - 4.4rem)); }
   .hero-inner { padding-top: 13rem; padding-bottom: 2.65rem; }
   .hero-image { object-position: 42% 48%; }

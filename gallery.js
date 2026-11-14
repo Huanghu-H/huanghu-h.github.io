@@ -1,7 +1,7 @@
 const gallery = document.querySelector(".gallery");
 const sceneLinks = Array.from(document.querySelectorAll(".scene-link"));
 
-if (typeof gallery.showModal === "function") {
+if (gallery && typeof gallery.showModal === "function") {
   const galleryImage = gallery.querySelector(".gallery-image");
   const galleryTitle = gallery.querySelector("#gallery-title");
   const galleryCount = gallery.querySelector(".gallery-count");

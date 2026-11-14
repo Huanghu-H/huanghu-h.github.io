@@ -7,6 +7,7 @@
     <meta name="description" content="Huanghu 的主页。翻看云海、城市夜色与四季风景。">
     <title>Huanghu 的主页 · 云上放映室</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="screening.css">
     <script src="gallery.js" defer></script>
   </head>
   <body id="top">
@@ -36,9 +37,9 @@
             <p class="eyebrow"><span aria-hidden="true">✦</span> 云上放映室</p>
             <h1 id="homepage-title" aria-label="Huanghu 的主页">Huanghu<span class="accent">.</span><small>的主页</small></h1>
             <p class="hero-note">从一束划过天空的光开始。</p>
-            <a class="pill" href="#scenes">开始放映 <span aria-hidden="true">↓</span></a>
+            <a class="pill" href="#projector">开始放映 <span aria-hidden="true">↓</span></a>
           </div>
-          <p class="hero-caption"><span aria-hidden="true">✧</span> 夜空的弧线</p>
+          <a class="hero-caption" href="#scenes"><span aria-hidden="true">✧</span> 浏览章节 <span aria-hidden="true">↘</span></a>
         </div>
       </section>
 
@@ -55,6 +56,49 @@
             <a href="#city">城里的灯 <span aria-hidden="true">↘</span></a>
             <a href="#seasons">四季有声 <span aria-hidden="true">↘</span></a>
           </nav>
+        </div>
+      </section>
+
+      <section class="projector" id="projector" aria-labelledby="projector-title">
+        <div class="shell">
+          <header class="projector-heading">
+            <h2 id="projector-title">选片台</h2>
+            <p>选一帧，换个地方看风景。</p>
+          </header>
+          <fieldset class="projector-controls">
+            <legend class="visually-hidden">选择放映画面</legend>
+            <div class="reel-options">
+              <label class="reel-option">
+                <input type="radio" name="screening" value="cloud" checked>
+                <img src="assets/wallpapers/cloud-city-small.webp" width="640" height="352" alt="" loading="lazy">
+                <span>云海</span>
+              </label>
+              <label class="reel-option">
+                <input type="radio" name="screening" value="street">
+                <img src="assets/wallpapers/city-sunset-small.webp" width="640" height="390" alt="" loading="lazy">
+                <span>晚霞</span>
+              </label>
+              <label class="reel-option">
+                <input type="radio" name="screening" value="shore">
+                <img src="assets/wallpapers/piano-shore-small.webp" width="640" height="390" alt="" loading="lazy">
+                <span>潮声</span>
+              </label>
+            </div>
+            <div class="reel-screen">
+              <figure class="reel-frame reel-cloud">
+                <img src="assets/wallpapers/cloud-city.webp" width="1600" height="880" alt="淡金色的太阳照着云海中露出的尖塔。" loading="lazy">
+                <figcaption><strong>云海之城</strong><a href="#sky">前往云上与星野 <span aria-hidden="true">↘</span></a></figcaption>
+              </figure>
+              <figure class="reel-frame reel-street">
+                <img src="assets/wallpapers/city-sunset.webp" width="1600" height="975" alt="城市十字路口上方，晚霞映着街边的玻璃楼。" loading="lazy">
+                <figcaption><strong>晚霞下的路口</strong><a href="#city">前往城里的灯 <span aria-hidden="true">↘</span></a></figcaption>
+              </figure>
+              <figure class="reel-frame reel-shore">
+                <img src="assets/wallpapers/piano-shore.webp" width="1600" height="975" alt="海滩上的三角钢琴面朝阳光照亮的海湾。" loading="lazy">
+                <figcaption><strong>海边的钢琴</strong><a href="#seasons">前往四季有声 <span aria-hidden="true">↘</span></a></figcaption>
+              </figure>
+            </div>
+          </fieldset>
         </div>
       </section>
 
@@ -110,6 +154,20 @@
           </div>
         </div>
       </section>
+
+      <aside class="moon-interval" aria-labelledby="moon-interval-title">
+        <div class="shell moon-inner">
+          <div class="moon-orbit">
+            <img src="assets/moon-mosaic.webp" width="700" height="700" alt="由月面照片拼合成的圆月，灰白色表面布满陨石坑。" loading="lazy">
+          </div>
+          <div class="moon-copy">
+            <p class="eyebrow"><span aria-hidden="true">✦</span> 幕间 · 月面特写</p>
+            <h2 id="moon-interval-title">月亮离镜头很近</h2>
+            <p>远看是一个圆。靠近了，才看见深浅不同的月海和陨石坑。画面由 NASA 月球勘测轨道飞行器拍摄的 1,231 张照片拼成。</p>
+            <a class="moon-source" href="https://science.nasa.gov/resource/moon-mosaic/">NASA 月球拼接图 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </aside>
 
       <section class="chapter city" id="city" aria-labelledby="city-title">
         <div class="shell">

@@ -3,81 +3,208 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#11152c">
-    <meta name="description" content="Huanghu 的主页。一间漂浮在云上的放映室。">
+    <meta name="theme-color" content="#0b1022">
+    <meta name="description" content="Huanghu 的主页。翻看云海、城市夜色与四季风景。">
     <title>Huanghu 的主页 · 云上放映室</title>
     <link rel="stylesheet" href="style.css">
     <script src="gallery.js" defer></script>
   </head>
   <body id="top">
     <a class="skip-link" href="#main">跳到内容</a>
-    <header class="site-header shell">
-      <a class="brand" href="#top" aria-label="Huanghu 的主页">
-        <span class="brand-mark" aria-hidden="true">✦</span>
-        <span>huanghu<span class="brand-period">.</span></span>
-      </a>
-      <nav class="site-nav" aria-label="主导航">
-        <a href="#main">首页</a>
-        <a href="#scenes">放映室 <span aria-hidden="true">↘</span></a>
-      </nav>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="#top" aria-label="Huanghu 的主页">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>huanghu<span class="accent">.</span></span>
+        </a>
+        <nav aria-label="主导航">
+          <a href="#sky">星野</a>
+          <a href="#city">城市</a>
+          <a href="#seasons">四季</a>
+        </nav>
+      </div>
     </header>
 
     <main id="main">
-      <section class="hero shell" aria-labelledby="homepage-title">
-        <div class="hero-copy">
-          <p class="eyebrow"><span aria-hidden="true">✧</span> 云上放映室</p>
-          <h1 id="homepage-title" aria-label="Huanghu 的主页"><span class="hero-name">Huanghu<span>.</span></span><span class="hero-subtitle">的主页</span></h1>
-          <p class="hero-note">在云上留一盏灯。<br>有空的话，进来看看。</p>
-          <a class="hero-link" href="#scenes">进入放映室 <span aria-hidden="true">↘</span></a>
+      <section class="hero" aria-labelledby="homepage-title">
+        <img class="hero-image" src="assets/wallpapers/starlight.webp"
+          srcset="assets/wallpapers/starlight-small.webp 640w, assets/wallpapers/starlight.webp 1920w"
+          sizes="100vw" width="1920" height="1176" fetchpriority="high"
+          alt="一道闪光划过蓝色云层，照亮地平线前的花海。">
+        <div class="shell hero-inner">
+          <div>
+            <p class="eyebrow"><span aria-hidden="true">✦</span> 云上放映室</p>
+            <h1 id="homepage-title" aria-label="Huanghu 的主页">Huanghu<span class="accent">.</span><small>的主页</small></h1>
+            <p class="hero-note">从一束划过天空的光开始。</p>
+            <a class="pill" href="#scenes">开始放映 <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="hero-caption"><span aria-hidden="true">✧</span> 夜空的弧线</p>
         </div>
-        <figure class="hero-art">
-          <img
-            src="assets/cloud-cinema.webp"
-            srcset="assets/cloud-cinema-small.webp 768w, assets/cloud-cinema.webp 1536w"
-            sizes="(max-width: 720px) 94vw, (min-width: 1370px) 810px, 61vw"
-            width="1536"
-            height="1024"
-            fetchpriority="high"
-            alt="花草和云朵托着一座红屋顶的浮岛放映室，一只黑白猫坐在天文台的石阶上。">
-          <figcaption>云岛放映室</figcaption>
-        </figure>
-        <span class="hero-spark" aria-hidden="true">✦</span>
       </section>
 
-      <section class="scenes shell" id="scenes" aria-labelledby="scenes-title">
-        <header class="scenes-header">
-          <h2 id="scenes-title">放映室</h2>
-          <p>三幅场景插画 · 点开看大图</p>
-        </header>
-        <div class="scene-grid">
-          <figure class="scene scene-tram">
-            <a class="scene-link" href="assets/meadow-tram.webp" aria-label="查看《穿过云野》大图">
-              <img src="assets/meadow-tram.webp" width="512" height="1024" loading="lazy" decoding="async" alt="蓝色电车穿过开满野花的草原，云层间露出远处的圆顶。">
-              <span class="scene-arrow" aria-hidden="true">↗</span>
-            </a>
-            <figcaption>穿过云野</figcaption>
-          </figure>
-          <figure class="scene scene-cat">
-            <a class="scene-link" href="assets/window-cat.webp" aria-label="查看《窗边的小猫》大图">
-              <img src="assets/window-cat.webp" width="512" height="1024" loading="lazy" decoding="async" alt="黑白小猫趴在开着浅粉色花朵的窗边，拱窗外是夕阳和暮云。">
-              <span class="scene-arrow" aria-hidden="true">↗</span>
-            </a>
-            <figcaption>窗边的小猫</figcaption>
-          </figure>
-          <figure class="scene scene-moon">
-            <a class="scene-link" href="assets/moon-observatory.webp" aria-label="查看《月下观测站》大图">
-              <img src="assets/moon-observatory.webp" width="512" height="1024" loading="lazy" decoding="async" alt="一轮弯月悬在深蓝色星空里，海崖上的玻璃观测站透出暖光。">
-              <span class="scene-arrow" aria-hidden="true">↗</span>
-            </a>
-            <figcaption>月下观测站</figcaption>
-          </figure>
+      <section class="intro shell" id="scenes" aria-labelledby="intro-title">
+        <div>
+          <p class="eyebrow"><span aria-hidden="true">✦</span> 放映目录</p>
+          <h2 id="intro-title">风景放慢以后</h2>
+        </div>
+        <div class="intro-copy">
+          <p>玩游戏时，有些地方值得停下来多看一会儿。比如天色一点点暗下来的街口，雪停后的湖面，或者一朵云正好盖住远处尖塔的那一刻。</p>
+          <p>这一页把几张壁纸排成一趟小小的旅程。先去云上，再回到街边，最后在海边停一会儿。</p>
+          <nav class="chapter-nav" aria-label="放映目录">
+            <a href="#sky">云上与星野 <span aria-hidden="true">↘</span></a>
+            <a href="#city">城里的灯 <span aria-hidden="true">↘</span></a>
+            <a href="#seasons">四季有声 <span aria-hidden="true">↘</span></a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="chapter sky" id="sky" aria-labelledby="sky-title">
+        <div class="shell">
+          <div class="feature">
+            <figure class="scene feature-art">
+              <a class="scene-link" href="assets/wallpapers/cloud-city.webp" aria-label="查看《云海之城》大图">
+                <img src="assets/wallpapers/cloud-city.webp"
+                  srcset="assets/wallpapers/cloud-city-small.webp 640w, assets/wallpapers/cloud-city.webp 1600w"
+                  sizes="(max-width: 740px) 92vw, 66vw" width="1600" height="880" loading="lazy"
+                  alt="日光从左侧穿过云层，照亮浮在云海上的尖塔。">
+                <span class="scene-arrow" aria-hidden="true">↗</span>
+              </a>
+              <figcaption><span class="scene-title">云海之城</span><span>《原神》截图</span></figcaption>
+            </figure>
+            <div class="chapter-copy">
+              <p class="eyebrow"><span aria-hidden="true">✷</span> 云海 · 幻境</p>
+              <h2 id="sky-title">云上与星野</h2>
+              <p>日光先碰到塔尖，最后才落到云海上。再往远处看，那些起伏的轮廓像刚从梦里浮出来，连地平线都辨不清了。</p>
+              <p>同样的蓝色到了夜里又换了模样。洞里的花发着光，山那边浮着一弯月，沿着光走，就能找到下一幕。</p>
+            </div>
+          </div>
+          <div class="scene-grid sky-grid">
+            <figure class="scene">
+              <a class="scene-link" href="assets/wallpapers/moon-horizon.webp" aria-label="查看《月球地平线》大图">
+                <img src="assets/wallpapers/moon-horizon-small.webp" width="640" height="324" loading="lazy" alt="巨大的蓝色星球从月面地平线升起。">
+                <span class="scene-arrow" aria-hidden="true">↗</span>
+              </a>
+              <figcaption><span class="scene-title">月球地平线</span><span>《原神》截图</span></figcaption>
+            </figure>
+            <figure class="scene">
+              <a class="scene-link" href="assets/wallpapers/violet-ridge.webp" aria-label="查看《紫色山脊》大图">
+                <img src="assets/wallpapers/violet-ridge-small.webp" width="640" height="324" loading="lazy" alt="淡紫色天幕下，蓝色山谷通往亮起的山脊。">
+                <span class="scene-arrow" aria-hidden="true">↗</span>
+              </a>
+              <figcaption><span class="scene-title">紫色山脊</span><span>《原神》截图</span></figcaption>
+            </figure>
+            <figure class="scene">
+              <a class="scene-link" href="assets/wallpapers/blue-grotto.webp" aria-label="查看《发光的洞窟》大图">
+                <img src="assets/wallpapers/blue-grotto-small.webp" width="640" height="324" loading="lazy" alt="蓝花遍地的洞窟里，一道圆形的光门藏在垂藤背后。">
+                <span class="scene-arrow" aria-hidden="true">↗</span>
+              </a>
+              <figcaption><span class="scene-title">发光的洞窟</span><span>《原神》截图</span></figcaption>
+            </figure>
+            <figure class="scene">
+              <a class="scene-link" href="assets/wallpapers/lantern-forest.webp" aria-label="查看《林间一盏灯》大图">
+                <img src="assets/wallpapers/lantern-forest-small.webp" width="640" height="324" loading="lazy" alt="紫色树林深处透出一间小屋的灯光。">
+                <span class="scene-arrow" aria-hidden="true">↗</span>
+              </a>
+              <figcaption><span class="scene-title">林间一盏灯</span><span>《原神》截图</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter city" id="city" aria-labelledby="city-title">
+        <div class="shell">
+          <div class="feature">
+            <figure class="scene feature-art">
+              <a class="scene-link" href="assets/wallpapers/city-sunset.webp" aria-label="查看《晚霞下的路口》大图">
+                <img src="assets/wallpapers/city-sunset.webp"
+                  srcset="assets/wallpapers/city-sunset-small.webp 640w, assets/wallpapers/city-sunset.webp 1600w"
+                  sizes="(max-width: 740px) 92vw, 66vw" width="1600" height="975" loading="lazy"
+                  alt="金橙色的晚霞落在现代城市的路口，楼上的招牌刚刚亮起。">
+                <span class="scene-arrow" aria-hidden="true">↗</span>
+              </a>
+              <figcaption><span class="scene-title">晚霞下的路口</span></figcaption>
+            </figure>
+            <div class="chapter-copy">
+              <p class="eyebrow"><span aria-hidden="true">✷</span> 黄昏 · 街景</p>
+              <h2 id="city-title">城里的灯</h2>
+              <p>傍晚最有意思的是交界那几分钟。玻璃楼上还挂着一层晚霞，下面的车灯和招牌已经亮了。站在路口，好像能同时看到白天和夜晚。</p>
+              <p>再拐过一条街，声音就轻了。路灯把树影留在地上，远处的楼群还亮着，走慢一点也没关系。</p>
+            </div>
+          </div>
+          <div class="scene-grid city-grid">
+            <figure class="scene">
+              <a class="scene-link" href="assets/wallpapers/night-avenue.webp" aria-label="查看《路灯排成一线》大图">
+                <img src="assets/wallpapers/night-avenue-small.webp" width="640" height="390" loading="lazy" alt="蓝灰色云层压在高楼上，路灯沿大道延伸至远处。">
+                <span class="scene-arrow" aria-hidden="true">↗</span>
+              </a>
+              <figcaption><span class="scene-title">路灯排成一线</span></figcaption>
+            </figure>
+            <figure class="scene">
+              <a class="scene-link" href="assets/wallpapers/blue-town.webp" aria-label="查看《蓝色街巷》大图">
+                <img src="assets/wallpapers/blue-town-small.webp" width="640" height="390" loading="lazy" alt="深蓝夜空下，窄巷里暖色木屋的灯光与远处高楼相映。">
+                <span class="scene-arrow" aria-hidden="true">↗</span>
+              </a>
+              <figcaption><span class="scene-title">蓝色街巷</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter seasons" id="seasons" aria-labelledby="seasons-title">
+        <div class="shell">
+          <div class="feature">
+            <figure class="scene feature-art">
+              <a class="scene-link" href="assets/wallpapers/piano-shore.webp" aria-label="查看《海边的钢琴》大图">
+                <img src="assets/wallpapers/piano-shore.webp"
+                  srcset="assets/wallpapers/piano-shore-small.webp 640w, assets/wallpapers/piano-shore.webp 1600w"
+                  sizes="(max-width: 740px) 92vw, 66vw" width="1600" height="975" loading="lazy"
+                  alt="太阳从云缝间照在一架临海的钢琴上，远处是海湾和山。">
+                <span class="scene-arrow" aria-hidden="true">↗</span>
+              </a>
+              <figcaption><span class="scene-title">海边的钢琴</span></figcaption>
+            </figure>
+            <div class="chapter-copy">
+              <p class="eyebrow"><span aria-hidden="true">✷</span> 花开 · 海风 · 初雪</p>
+              <h2 id="seasons-title">四季有声</h2>
+              <p>春天的路被樱花遮住一半。到了夏天，风从金黄的花田上掠过去。雪把湖边的声音收得很轻，水却还留着一抹蓝。</p>
+              <p>最后把镜头留给海边的钢琴。从画面里听不见琴声，但潮水已经一遍遍替它数着拍子。</p>
+            </div>
+          </div>
+          <div class="scene-grid seasons-grid">
+            <figure class="scene">
+              <a class="scene-link" href="assets/wallpapers/cherry-road.webp" aria-label="查看《樱花拐角》大图">
+                <img src="assets/wallpapers/cherry-road-small.webp" width="640" height="390" loading="lazy" alt="两排盛开的粉紫色樱花盖住道路上方的天空。">
+                <span class="scene-arrow" aria-hidden="true">↗</span>
+              </a>
+              <figcaption><span class="scene-title">樱花拐角</span></figcaption>
+            </figure>
+            <figure class="scene">
+              <a class="scene-link" href="assets/wallpapers/yellow-meadow.webp" aria-label="查看《花田午后》大图">
+                <img src="assets/wallpapers/yellow-meadow-small.webp" width="640" height="390" loading="lazy" alt="蓝天下的黄色花田中有几处白色遮阳棚，远处是青山。">
+                <span class="scene-arrow" aria-hidden="true">↗</span>
+              </a>
+              <figcaption><span class="scene-title">花田午后</span></figcaption>
+            </figure>
+            <figure class="scene">
+              <a class="scene-link" href="assets/wallpapers/snow-lake.webp" aria-label="查看《雪后的湖》大图">
+                <img src="assets/wallpapers/snow-lake-small.webp" width="640" height="390" loading="lazy" alt="翠色湖水贴着积雪的步道，远处山林覆着白雪。">
+                <span class="scene-arrow" aria-hidden="true">↗</span>
+              </a>
+              <figcaption><span class="scene-title">雪后的湖</span></figcaption>
+            </figure>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer shell">
-      <span><span class="footer-spark" aria-hidden="true">✧</span> Huanghu 的主页</span>
-      <a href="#top">回到顶部 <span aria-hidden="true">↑</span></a>
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <div>
+          <p class="footer-brand">Huanghu<span class="accent">.</span></p>
+          <p>壁纸来自 Huanghu 的收藏 · 段落为示例文字</p>
+        </div>
+        <a class="pill" href="#top">回到顶部 <span aria-hidden="true">↑</span></a>
+      </div>
     </footer>
 
     <dialog class="gallery" aria-labelledby="gallery-title">
@@ -88,7 +215,10 @@
         <img class="gallery-image" alt="">
         <div class="gallery-controls">
           <button class="gallery-previous" type="button" aria-label="上一幅">←</button>
-          <p id="gallery-title"></p>
+          <div class="gallery-caption" aria-live="polite">
+            <p id="gallery-title"></p>
+            <p class="gallery-count"></p>
+          </div>
           <button class="gallery-next" type="button" aria-label="下一幅">→</button>
         </div>
       </div>

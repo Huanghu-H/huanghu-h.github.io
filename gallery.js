@@ -4,6 +4,7 @@ const sceneLinks = Array.from(document.querySelectorAll(".scene-link"));
 if (typeof gallery.showModal === "function") {
   const galleryImage = gallery.querySelector(".gallery-image");
   const galleryTitle = gallery.querySelector("#gallery-title");
+  const galleryCount = gallery.querySelector(".gallery-count");
   let activeScene = 0;
 
   function showScene(index) {
@@ -11,7 +12,8 @@ if (typeof gallery.showModal === "function") {
     const link = sceneLinks[activeScene];
     galleryImage.src = link.href;
     galleryImage.alt = link.querySelector("img").alt;
-    galleryTitle.textContent = link.closest("figure").querySelector("figcaption").textContent;
+    galleryTitle.textContent = link.closest("figure").querySelector(".scene-title").textContent;
+    galleryCount.textContent = `${activeScene + 1} / ${sceneLinks.length}`;
   }
 
   sceneLinks.forEach((link, index) => {
@@ -31,7 +33,9 @@ if (typeof gallery.showModal === "function") {
   });
 
   gallery.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowLeft") showScene(activeScene - 1);
-    if (event.key === "ArrowRight") showScene(activeScene + 1);
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      showScene(activeScene + (event.key === "ArrowLeft" ? -1 : 1));
+    }
   });
 }
